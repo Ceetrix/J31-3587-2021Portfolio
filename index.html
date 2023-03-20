@@ -25,6 +25,7 @@
             <h4> </h4>
             <h1>Cecilia Jeruto </h1>
             <h3>I am a professional Web Developer  </h3>
+            <h2><img src="hello.GIF" alt="Hello GIF"></h2>
            
         </div>
         <div class="images">
@@ -42,7 +43,9 @@
                 <h2>About Me</h2>
                 <h5></h5>
                 <p>Hi, I'm Cecilia Jeruto, a web developer with 2 years of experience creating responsive and engaging websites for a variety of clients. I have a Bachelor's degree Information Technology and am certified in HTML, CSS, and JavaScript. My skills include front-end development, user experience design, and project management. In my free time, I enjoy hiking, photography, and learning new programming languages.</p>
-                    <button type="button">Lets Talk</button>
+                   <img src="hiking.GIF" alt="Hello GIF">
+                <img src="photography.GIF" alt="Hello GIF"> 
+                <button type="button">Lets Talk</button>
 
             </div>
 
@@ -97,6 +100,41 @@
     </div>
     <div class="contact-me" >
         <p>Let's talk about a project </p>
+        <p>I can create 3D worlds and VRML files at beginner level like the green cube hovering below</p>
+        <head>
+	<title>3D World</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+	<script>
+		// create the scene
+		var scene = new THREE.Scene();
+		
+		// create the camera
+		var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+		camera.position.z = 5;
+		
+		// create the renderer
+		var renderer = new THREE.WebGLRenderer();
+		renderer.setSize(window.innerWidth, window.innerHeight);
+		document.body.appendChild(renderer.domElement);
+		
+		// create a cube
+		var geometry = new THREE.BoxGeometry();
+		var material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+		var cube = new THREE.Mesh(geometry, material);
+		scene.add(cube);
+		
+		// render the scene
+		function animate() {
+			requestAnimationFrame(animate);
+			cube.rotation.x += 0.01;
+			cube.rotation.y += 0.01;
+			renderer.render(scene, camera);
+		}
+		animate();
+	</script>
+</body>
         <a class="button-two"  href="https://www.linkedin.com/in/cecilia-jeruto-0b0020204/">Hire Me</a>        
     </div>
 
@@ -108,6 +146,10 @@
                 <h5></h5>
                 <p>Hi, I'm Kennedy kinyanjui and i have had an opportunity of hiring Cecilia to make for me a food ordering website and indeed it was such an amazing website </p>
                 <p>Hi, I'm Bridgit and i have had an opportunity of hiring Cecilia to make for me a  website and indeed it was such an amazing website </p>
+                <p>Example of an existing website I have created</p>
+                <video width="640" height="360" controls>
+                    <source src="Ndula.mov.mp4" type="video/mp4">
+                </video>
                
 
             </div>
